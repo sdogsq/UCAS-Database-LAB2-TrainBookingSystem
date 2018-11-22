@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>查询具体车次</title>
+</head>
+<body>
+<meta charset="utf-8"/>
+<h2>查询具体车次</h2>
+
+<form action="Query_Train.php" method="GET">
+TrainID:<br>
+<input type="text" name="T_TID" value="">
+<br>
+Date:
+ <br>
+<input type="date" name="date_search" id="date_search">
+
+<!-- set default date = torommow -->
+<script type="text/javascript"> 
+  var t=document.getElementById("date_search"); 
+  d=new Date(); 
+  d.setDate(d.getDate()+1); //tomorrow
+  t.value=d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate(); 
+</script>
+
+<br>
+<br>
+<input type="submit" value="查询">
+</form> 
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>查询两地间车次</title>
+</head>
+<body>
+<meta charset="utf-8"/>
+<h2>查询两地间车次</h2>
+
+<form action="Query_Route.php" method="GET">
+始发城市:<br>
+<input type="text" name="CityL" id ='test' value="">
+ 
+<br>到达城市:<br>
+<input type="text" name="CityR" value="">
+
+<br>出发时间:<br>
+<input type="datetime-local" name="datetime" id="datetime">
+
+<!-- set default date = torommow -->
+<script type="text/javascript"> 
+  var t=document.getElementById("datetime"); 
+  d=new Date();
+//  var isoStr = new Date().toISOString();
+   d.setDate(d.getDate()+1);
+  t.value=d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()+"T00:00:00.000"; 
+</script>
+
+<br>
+<br>
+<input type="submit" value="查询">
+</form> 
+
+</body>
+</html>
+ 
